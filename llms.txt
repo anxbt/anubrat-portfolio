@@ -1,0 +1,29 @@
+# Anubrat Sahoo - Developer Portfolio
+
+This repository contains the source code for the personal developer portfolio of Anubrat Sahoo, a full-stack and Web3 engineer.
+
+## Tech Stack
+- **Framework:** React 19 + Vite
+- **Styling:** Tailwind CSS v4 with custom CSS variables (`src/index.css`)
+- **Typography:** IBM Plex Sans and IBM Plex Mono
+- **Build Strategy:** Statically pre-rendered via a custom `prerender.js` script to improve initial load performance and SEO.
+
+## Directory Structure
+- `src/components/`: React components defining the portfolio sections.
+  - `Hero.jsx`, `About.jsx`, `Skills.jsx`, `Exploring.jsx`: Minimalist presentation components.
+  - `Projects.jsx`: Renders Web2 and Web3 projects inside highlighted, pop-out card containers with distinct SVG watermarks.
+  - `PullRequests.jsx`: Dynamically fetches and renders recent GitHub PRs using the GitHub Search API.
+  - `FAQ.jsx`: Uses an interactive accordion pattern for clean text-heavy rendering.
+- `src/data/portfolio.js`: The central single source of truth for all portfolio content (projects, links, skills).
+- `public/sitemap.xml`: SEO sitemap.
+- `index.html`: The main entry point template.
+
+## Design Philosophy & Conventions
+- **Minimalist Aesthetic:** The UI mimics a clean "paper" document using a muted, earthy color palette defined in `index.css` (`--color-paper-bg: #faf7f0`).
+- **Feature Highlighting:** Important content sections like Projects and Pull Requests use "pop-out" UI cards with subtle background SVG watermarks to break up scroll fatigue without breaking the minimalist aesthetic.
+- **Responsiveness:** Outer and inner padding scales dynamically based on screen size to prevent UI clustering on mobile devices.
+
+## Development Scripts
+- `pnpm run dev`: Starts the Vite development server.
+- `pnpm run build`: Bundles the React app and executes `prerender.js` for static generation.
+- `pnpm run lint`: Runs ESLint over the project files.
