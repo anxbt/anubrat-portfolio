@@ -1,0 +1,24 @@
+# Anubrat Sahoo
+
+AI Engineer — Model Training, Evaluation & Agent Systems
+
+I build AI applications and run model experiments. My work spans OCR research, small-model training and sandbox-based evaluation. My technical focus includes reinforcement learning and post-training—training objectives, reward design and how we measure whether a model actually improves.
+
+## Selected work
+
+- [MiniGPT Optimizer Benchmark](https://github.com/anxbt/minigpt-optimizer-benchmark): seed-matched, single-GPU comparisons of AdamW and Hybrid Muon on small GPT models.
+- [Safety-Calibrated OCR Detection](https://github.com/anxbt/ocr): proof of concept for finding cancelled handwriting before OCR, with calibration and abstention experiments. Not deployed.
+- [Docker-Based AI Agent Sandbox](https://github.com/anxbt/ai-agent-sandboxing): bounded tool loop for running Python tasks in Docker.
+- [OnyxAI](https://github.com/anxbt/onyx-ai): multimodal AI workspace and model routing.
+- [S3Finder](https://github.com/anxbt/s3finder): S3 desktop browser with resumable SSH/SFTP transfers.
+
+## Skills and tools
+
+Python, PyTorch, model training and evaluation, reinforcement learning and post-training concepts, OCR, computer vision, TypeScript, Node.js, Docker, React, PostgreSQL, and AWS.
+
+## Links
+
+- Website: https://anxbrt.dev/
+- GitHub: https://github.com/anxbt
+- LinkedIn: https://linkedin.com/in/anubrat-sahoo
+- Email: anubrat23@gmail.com

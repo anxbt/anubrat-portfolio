@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <nav className="flex justify-between items-center py-8 border-b border-paper-border flex-wrap gap-3">
       <span className="font-mono text-[0.95rem] font-medium tracking-[0.02em]">
-        anubrat.dev
+        anxbrt.dev
       </span>
       <div className="flex gap-6 flex-wrap">
         {portfolioData.links.map((link) => (

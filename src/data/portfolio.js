@@ -1,46 +1,59 @@
 export const portfolioData = {
   name: "Anubrat Sahoo",
-  tagline: "Full-stack engineer building web applications and onchain protocols.",
-  about: `I'm a third-year CS student at SOA University, Bhubaneswar. I've freelanced on production web applications handling everything from backend APIs and auth systems to cloud deployments on AWS. On the side, I build and deploy smart contracts, including a grant-backed dApp live on mainnet. I care about systems that are correct, predictable, and maintainable.`,
+  headline: "AI Engineer — Model Training, Evaluation & Agent Systems",
+  tagline:
+    "I build AI applications and run model experiments. My work spans OCR research, small-model training and sandbox-based evaluation. My technical focus includes reinforcement learning and post-training—training objectives, reward design and how we measure whether a model actually improves.",
   links: [
     { label: "GitHub", href: "https://github.com/anxbt" },
-    { label: "Twitter", href: "https://twitter.com/anxbrt" },
     { label: "LinkedIn", href: "https://linkedin.com/in/anubrat-sahoo" },
     { label: "Email", href: "mailto:anubrat23@gmail.com" },
   ],
-  web2Projects: [
+  aiProjects: [
     {
-      title: "Multi-Tenant RBAC Platform",
+      title: "MiniGPT Optimizer Benchmark",
       problem:
-        "Most auth setups bolt on permissions as an afterthought. I modeled tenant isolation, roles, and permissions at the database level from day one — so access control is a first-class concern, not a patch.",
-      stack: ["PostgreSQL", "Express", "Next.js", "Clerk", "TypeScript"],
-      github: "https://github.com/anxbt",
-      live: null,
+        "Built seed-matched, single-GPU experiments comparing AdamW and Hybrid Muon on small GPT models. The public report shows validation-loss and throughput tradeoffs, with the benchmark's limits stated.",
+      stack: ["Python", "PyTorch", "MiniGPT", "Model Evaluation"],
+      github: "https://github.com/anxbt/minigpt-optimizer-benchmark",
     },
     {
-      title: "AI Resume Readiness Platform",
+      title: "Safety-Calibrated OCR Detection",
       problem:
-        "Built a platform that evaluates job readiness by pulling resume data and GitHub contribution activity, then runs scoring logic to estimate market-aligned salary ranges. Deployed on AWS Fargate with PostgreSQL and S3.",
-      stack: ["PERN Stack", "TypeScript", "AWS Fargate", "S3"],
-      github: "https://github.com/anxbt/GitHub-AI-Talent-Analyzer",
-      live: null,
+        "Built a proof of concept to detect cancelled handwriting before OCR. The repository documents detector comparisons, confidence calibration and cases where the system should abstain. It is not deployed.",
+      stack: ["Python", "PyTorch", "RF-DETR", "Evaluation"],
+      github: "https://github.com/anxbt/ocr",
     },
     {
-      title: "Real-Time Online Clipboard",
+      title: "Docker-Based AI Agent Sandbox",
       problem:
-        "Instant text sharing across devices with WebSocket-based low-latency sync, room-based isolation for concurrent users, and graceful reconnection handling.",
-      stack: ["WebSockets", "Node.js", "Express", "React"],
-      github: "https://github.com/anxbt/chat-room",
-      live: null,
+        "Built a bounded tool loop that runs Python tasks in Docker. The public repository shows a prototype and its execution flow; it does not claim a security audit or production scale.",
+      stack: ["TypeScript", "Docker", "Agent Tools"],
+      github: "https://github.com/anxbt/ai-agent-sandboxing",
+    },
+  ],
+  supportingProjects: [
+    {
+      title: "OnyxAI",
+      problem:
+        "Built a multimodal AI workspace with model routing, visual learning outputs and a multi-step research mode.",
+      stack: ["React Native", "Python", "VLMs"],
+      github: "https://github.com/anxbt/onyx-ai",
+    },
+    {
+      title: "S3Finder",
+      problem:
+        "Built an S3 desktop browser with resumable SSH/SFTP transfers and tests for interruption and restart recovery.",
+      stack: ["Electron", "Node.js", "AWS S3", "SFTP"],
+      github: "https://github.com/anxbt/s3finder",
     },
   ],
   web3Projects: [
     {
       title: "OG / iSentinel Application",
-      badge: "Grant-backed · Mainnet",
+      badge: "Foundry",
       problem:
-        "Full-stack Web3 application with Solidity contracts deployed on mainnet. Smart contracts are the system of record; frontend logic is fully constrained by on-chain state. Contract logic tested with Foundry. Received ecosystem grant support.",
-      stack: ["Solidity", "Foundry", "Full-stack dApp", "Mainnet"],
+        "Full-stack application with Solidity contracts acting as the system of record. Contract logic is tested with Foundry.",
+      stack: ["Solidity", "Foundry", "Full-stack dApp"],
       github: "https://github.com/anxbt/OG-Bounty-project",
     },
     {
@@ -60,70 +73,44 @@ export const portfolioData = {
       github: "https://github.com/anxbt/Arbritrium-Rollup-Hack25",
     },
   ],
-  currentlyExploring: [
-    "Uniswap V4 hooks and concentrated liquidity mechanics",
-    "UUPS and Diamond upgrade patterns — storage layout management at depth",
-    "Impermanent loss modeling (wrote a Twitter thread + animated YouTube explainer on this)",
-  ],
-  writingAndExplainers: [
-    {
-      title: "Concentrated Liquidity in Uniswap V4",
-      description: "How Uniswap V4 prices assets within ranges and why it's capital efficient",
-      link: "https://medium.com/@anubrat23/the-hook-uniswap-doesnt-talk-about-341c4f302286",
-      thumbnail: "https://images.unsplash.com/photo-1639762681485-074b7f4ec651?w=800&q=80",
-      platform: "Medium"
-    },
-    {
-      title: "From Infinite Liquidity to Concentrated Markets",
-      description: "What Uniswap Actually Fixed and What It Didn't...",
-      link: "https://x.com/anxbrt/status/2027033972770021479?s=20",
-      thumbnail: "https://pbs.twimg.com/media/HCF1RbrbcAAzW0c.jpg",
-      platform: "X (Twitter)"
-    },
-    {
-      title: "What Uniswap V3 ACTUALLY Fixed",
-      description: "Most people describe Uniswap V3 in two words: 'Concentrated Liquidity'. This visual breakdown explains what actually changed under the hood.",
-      link: "https://youtu.be/EE1cAN5fhQ0",
-      thumbnail: "https://img.youtube.com/vi/EE1cAN5fhQ0/mqdefault.jpg",
-      platform: "YouTube"
-    }
+  technicalFocus: [
+    "Reinforcement learning and post-training: training objectives, reward design and measuring whether a model improves",
+    "Model training and evaluation, including controlled small-model experiments",
+    "OCR and computer vision, including confidence calibration and abstention",
+    "Agent tools and sandboxed execution",
   ],
   faq: [
     {
-      q: "Is Anubrat Sahoo available for hire?",
-      a: "Yes. Anubrat Sahoo is actively open to work and looking for full-stack engineering, backend engineering, or Web3/Solidity development roles. He can be reached at anubrat23@gmail.com.",
+      q: "What does Anubrat work on?",
+      a: "AI applications, model experiments, OCR research, evaluation and agent systems. His technical focus also includes reinforcement learning and post-training.",
     },
     {
-      q: "What full-stack technologies does Anubrat Sahoo know?",
-      a: "Anubrat Sahoo works with React, Next.js, Node.js, TypeScript, JavaScript, PostgreSQL, REST APIs, and AWS (S3, RDS, Fargate). He has shipped production web applications covering backend APIs, authentication systems, RBAC, and cloud deployments.",
+      q: "What is his reinforcement learning experience?",
+      a: "Reinforcement learning and post-training are technical focus areas. The portfolio links to model training and evaluation work; it does not claim a completed RL system.",
     },
     {
-      q: "What Web3 and blockchain experience does Anubrat Sahoo have?",
-      a: "Anubrat Sahoo has built and deployed Solidity smart contracts to mainnet, including a grant-backed full-stack dApp. He works with Foundry, EIP-2535 Diamond Standard, upgradeable contracts, invariant testing, and fuzzing.",
+      q: "Which tools does he use?",
+      a: "Python, PyTorch, TypeScript, Node.js, Docker, React, PostgreSQL and AWS, as shown across the linked projects.",
     },
     {
-      q: "What kind of developer roles is Anubrat Sahoo looking for?",
-      a: "Anubrat Sahoo is open to full-stack engineering, backend engineering, and Web3/Solidity development positions. He is a third-year CS student at SOA University, Bhubaneswar, with freelance production experience and a mainnet-deployed project.",
-    },
-    {
-      q: "Has Anubrat Sahoo shipped production software?",
-      a: "Yes. He has freelanced on production web applications handling backend APIs, auth systems, and AWS cloud deployments. He also deployed a grant-backed smart contract dApp to mainnet with Foundry-tested contracts.",
-    },
-    {
-      q: "How can I hire Anubrat Sahoo?",
-      a: "Reach out directly at anubrat23@gmail.com or connect on LinkedIn at linkedin.com/in/anubrat-sahoo. He is actively looking for full-stack, backend, or Web3 engineering roles and responds quickly to serious enquiries.",
-    },
-    {
-      q: "What is Anubrat Sahoo's availability for a new role?",
-      a: "Immediately available. Open to full-time, part-time, contract, or internship roles in full-stack, backend, or Web3/Solidity engineering.",
+      q: "How can I contact Anubrat?",
+      a: "Email anubrat23@gmail.com or connect on LinkedIn at linkedin.com/in/anubrat-sahoo.",
     },
   ],
   skills: {
-    Languages: ["TypeScript", "JavaScript", "Solidity", "SQL"],
-    Frontend: ["React", "Next.js", "Tailwind CSS"],
-    Backend: ["Node.js", "Express", "REST APIs", "RBAC", "Webhooks"],
-    "Smart Contracts": ["EVM", "Foundry", "Diamond Standard", "Invariant Testing", "Fuzzing"],
-    "Cloud & Infra": ["Docker", "AWS (S3, RDS, Fargate)", "CI/CD", "PostgreSQL"],
-    Architecture: ["Multi-Tenant Systems", "Upgradeable Contracts", "API Design"],
+    Languages: ["Python", "TypeScript", "JavaScript", "Solidity", "SQL"],
+    "AI & Machine Learning": [
+      "Model Training",
+      "Model Evaluation",
+      "Reinforcement Learning",
+      "Post-Training",
+      "Computer Vision",
+      "OCR",
+      "PyTorch",
+    ],
+    Frontend: ["React", "React Native", "Next.js", "Tailwind CSS"],
+    Backend: ["Node.js", "Express", "REST APIs", "PostgreSQL"],
+    "Cloud & Infra": ["Docker", "AWS (S3, RDS, Fargate)"],
+    Web3: ["Solidity", "EVM", "Foundry", "Smart Contracts"],
   },
 };
